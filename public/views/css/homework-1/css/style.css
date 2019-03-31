@@ -1,0 +1,49 @@
+html {
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 175%;
+}
+
+h5 {
+  font-size: 1vw;
+}
+
+h6 {
+  font-size: 1.2vmin;
+}
+
+td:first-letter {
+  color: red
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+
+tr:nth-child(odd) td:nth-child(1n+5) {
+  font-weight: bold;
+  font-style: italic;
+}
