@@ -42,7 +42,6 @@ tr:nth-child(even) {
   background-color: #ddd;
 }
 
-
 tr:nth-child(odd) td:nth-child(1n+5) {
   font-weight: bold;
   font-style: italic;
