@@ -24,10 +24,41 @@ footer {
   font-family: Arial, sans-serif;
 }
 
-img {
-  height: 12%;
+nav {
+    font-size: 18px;
+    padding: 20px;
+    position: relative;
+}
+
+.login {
+  position: absolute;
+  right: 6.5%;
+}
+
+.slash {
+  position: absolute;
+  right: 5.5%;
+}
+
+.sign {
+  position: absolute;
+  right: 0.5%;
+  padding-right: 10px;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 30px;
+  margin-left: 20px;
+}
+
+table {
+  margin: 20px;
+}
+
+td {
+  border: 1px solid grey;
+  border-color: rgba(230, 230, 230, 1);
+  padding: 20px 50px 20px 50px;
 }
