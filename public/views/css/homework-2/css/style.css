@@ -21,36 +21,33 @@ footer {
 /* Your styles go below */
 * {
   box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
 }
 
 nav {
-    font-size: 18px;
-    padding: 20px;
-    position: relative;
+  font-size: 18px;
+  padding: 20px;
+  position: relative;
 }
 
-.login {
+.authorization {
   position: absolute;
-  right: 6.5%;
-}
-
-.slash {
-  position: absolute;
-  right: 5.5%;
-}
-
-.sign {
-  position: absolute;
-  right: 0.5%;
-  padding-right: 10px;
+  right: 20px;
 }
 
 h1 {
   font-size: 35px;
   font-weight: bold;
-  margin: 30px;
-  margin-left: 20px;
+  margin: 30px 20px 10px 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 30px 20px 10px 20px;
 }
 
 table {
@@ -58,7 +55,43 @@ table {
 }
 
 td {
-  border: 1px solid grey;
-  border-color: rgba(230, 230, 230, 1);
+  border: 1px solid silver;
   padding: 20px 50px 20px 50px;
+}
+
+footer {
+  font-size: 18px;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-gallery p {
+  font-size: 18px;
+  padding-left: 20px;
+  text-indent: 1.5em;
+}
+
+form {
+  margin: 20px;
+}
+
+.email {
+  border: 1px solid silver;
+  padding: 10px;
+  height: 45px;
+  width: 17em;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+button {
+  border: 1px solid silver;
+  font-weight: bold;
+  padding: 10px;
+  height: 45px;
+  text-transform: uppercase;
+}
+
+.subscribe:focus {
+  border-color: red;
 }

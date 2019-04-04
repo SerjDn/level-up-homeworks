@@ -5,32 +5,20 @@
     <title>CSS HW 2</title>
     <style>a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}button,input,optgroup,select,textarea{background:0 0;border:0;padding:0;margin:0;font:inherit;color:inherit;box-shadow:none}button{height:auto;cursor:pointer}button:focus{outline:0}button::-moz-focus-inner{outline:0;border:0;padding:0}
     </style>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="wrapper">
       <header>
         <nav>
-          <span>
-            Home
-          </span>
-          <span>
-            About
-          </span>
-          <span>
-            Portfolio
-          </span>
-          <span>
-            Contacts
-          </span>
-          <span class="login">
-            Log in
-          </span>
-          <span class="slash">
-            /
-          </span>
-          <span class="sign">
-            Sign in
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contacts</a>
+          <snan class="authorization">
+          <a href="#">Log in</a>
+          <span>/</span>
+          <a href="#">Sign in</a>
           </span>
         </nav>
       </header>
@@ -41,34 +29,50 @@
             <tbody>
               <tr>
                 <td>
-                  <img src="images/red2.jpg" />
+                  <img src="images/red2.jpg" alt="" />
                 </td>
                 <td>
-                  <img src="images/silver2.jpg" />
+                  <img src="images/silver2.jpg" alt="" />
                 </td>
                 <td>
-                  <img src="images/blue2.jpg" />
+                  <img src="images/blue2.jpg" alt="" />
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src="images/orange2.jpg" />
+                  <img src="images/orange2.jpg" alt="" />
                 </td>
                 <td>
-                  <img src="images/grey2.jpg" />
+                  <img src="images/grey2.jpg" alt="" />
                 </td>
                 <td>
-                  <img src="images/black3.jpg" />
+                  <img src="images/black3.jpg" alt="" />
                 </td>
               </tr>
             </tbody>
           </table>
         </section>
-        <section>
-          block 2
+        <section class="about-gallery">
+          <h2>
+            About gallery
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </section>
         <section>
-          block 3
+          <h2>
+            Subscribe for new updates
+          </h2>
+          <form method="post">
+            <input class="email" type="email" name="email" placeholder="Email*" required="required" />
+            <button class="subscribe" type="submit">Subscribe</button>
+          </form>
         </section>
       </div>
       <footer>
