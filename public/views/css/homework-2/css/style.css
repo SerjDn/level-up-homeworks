@@ -19,8 +19,13 @@ footer {
 }
 
 /* Your styles go below */
+
 * {
   box-sizing: border-box;
+}
+
+.content {
+  padding: 30px 20px 30px 20px;
 }
 
 body {
@@ -29,29 +34,35 @@ body {
 
 nav {
   font-size: 18px;
-  padding: 20px;
+  padding: 30px;
   position: relative;
+}
+
+footer {
+  font-size: 18px;
+  padding: 30px;
+  text-align: center;
 }
 
 .authorization {
   position: absolute;
-  right: 20px;
+  right: 30px;
 }
 
 h1 {
   font-size: 35px;
   font-weight: bold;
-  margin: 30px 20px 10px 20px;
+  margin-bottom: 30px;
 }
 
 h2 {
   font-size: 30px;
   font-weight: bold;
-  margin: 30px 20px 10px 20px;
+  margin-bottom: 20px;
 }
 
 table {
-  margin: 20px;
+  margin-bottom: 30px;
 }
 
 td {
@@ -59,20 +70,17 @@ td {
   padding: 20px 50px 20px 50px;
 }
 
-footer {
-  font-size: 18px;
-  padding: 20px;
-  text-align: center;
-}
-
 .about-gallery p {
   font-size: 18px;
-  padding-left: 20px;
   text-indent: 1.5em;
 }
 
-form {
-  margin: 20px;
+.about-gallery {
+  margin-bottom: 30px;
+}
+
+.subscribe:hover {
+  border-color: red;
 }
 
 .email {
@@ -81,7 +89,6 @@ form {
   height: 45px;
   width: 17em;
   margin-right: 30px;
-  margin-bottom: 10px;
 }
 
 button {
@@ -90,8 +97,4 @@ button {
   padding: 10px;
   height: 45px;
   text-transform: uppercase;
-}
-
-.subscribe:focus {
-  border-color: red;
 }
