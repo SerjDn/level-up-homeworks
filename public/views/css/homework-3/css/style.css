@@ -35,6 +35,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 1;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
 .navigation a {
@@ -49,20 +50,39 @@ a.navigation-selected {
   width: 1170px;
 }
 
+.page-head h1 {
+  font-size: 26px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
 .page-content li {
   display: inline-block;
-/*  padding-right: 20px;*/
   position: relative;
+  padding-bottom: 30px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
-.page-content p {
-  width: 310px;
+.page-content li:nth-child(1), li:nth-child(2) {
+  margin-right: 25px;
+  margin-bottom: 25px; 
+}
+
+.page-content ul:nth-child(2) {
+  padding-bottom: 40px;
+}
+
+.card-description {
+  width: 320px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  padding-right: 20px;
 }
 
 .page-content img:nth-child(odd){
-  width: 310px;
+  width: 320px;
   height: 180px;
+  padding-bottom: 20px;
 }
 
 .page-content img:nth-child(n+2) {
@@ -73,15 +93,22 @@ a.navigation-selected {
 
 .page-content h2 {
   font-size: 22px;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
-.page-content button {
+.card-button {
+  text-align: center;  
+}
+
+.card-button .link {
   border: 1px solid #3F51B5;
   border-radius: 3px;
   background-color: #3F51B5;
   color: white;
-  padding: 5px 50px 5px 50px;
   text-transform: uppercase;
+  padding: 10px 87px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
 .page-navigation {
@@ -90,6 +117,7 @@ a.navigation-selected {
 
 .page-navigation a {
   text-decoration: underline;
+  padding-right: 20px;
 }
 
 a.page-selected {
