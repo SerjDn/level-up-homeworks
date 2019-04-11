@@ -1,0 +1,22 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  color: #444;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Unknown props */
+/* box-shadow: 0 2px 5px rgba(0,0,0,.26); - header */
+/* border-radius: 3px; - card rounding */
+/* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); - card shadow */
+/* border-top-left-radius: 3px;
+  border-top-right-radius: 3px; - for card image */
+
+/* Your styles go below */
