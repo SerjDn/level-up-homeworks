@@ -1,0 +1,310 @@
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  color: #444;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+/* Unknown props */
+/* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); - filter */
+/* transform: rotate(45deg); - checkbox */
+/* border-radius: 3px; - card rounding */
+
+/* Your styles go below */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.header, .footer {
+  text-transform: uppercase;
+  background-color: grey;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+.content {
+  padding-top: 30px;
+}
+.sidebar {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-bottom: 30px;
+}
+.sidebar-head {
+  padding: 10px 10px 20px;
+  font-size: 1.1rem;
+}
+.filter {
+  padding: 0 10px 10px;
+}
+.checkbox {
+  margin-bottom: 10px;
+}
+.checkbox:last-child {
+  margin-bottom: 0;
+}
+.checkbox-input {
+  display: none;
+}
+.checkbox-name {
+  position: relative;
+  display: table;
+  cursor: pointer;
+  padding-left: 30px;
+  line-height: 20px;
+}
+.checkbox-name:before {
+  content: "";
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+}
+.checkbox-input:checked + .checkbox-name:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid white; 
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+  top: 6px;
+  left: 5px;
+}
+.checkbox-input:checked + .checkbox-name:before {
+  background-color: #1d61d8;
+  border-color: #1d61d8;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (min-width: 544px) {
+  .container {
+    width: 524px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 748px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 1004px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+.row {
+  margin: 0 -15px;
+}
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.column {
+  padding: 0 15px;
+  float: left;
+  width: 100%;
+}
+@media (min-width: 544px) {
+  .col-sm-1 {
+    width: 25%;
+  }
+  .col-sm-2 {
+    width: 50%;
+  }
+  .col-sm-3 {
+    width: 75%;
+  }
+  .col-sm-4 {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .col-md-1 {
+    width: 8.3333%;
+  }
+  .col-md-2 {
+    width: 16.6666%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.3333%;
+  }
+  .col-md-5 {
+    width: 41.6666%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.3333%;
+  }
+  .col-md-8 {
+    width: 66.6666%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.3333%;
+  }
+  .col-md-11 {
+    width: 91.6666%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .col-lg-1 {
+    width: 8.3333%;
+  }
+  .col-lg-2 {
+    width: 16.6666%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.3333%;
+  }
+  .col-lg-5 {
+    width: 41.6666%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.3333%;
+  }
+  .col-lg-8 {
+    width: 66.6666%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.3333%;
+  }
+  .col-lg-11 {
+    width: 91.6666%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl-1 {
+    width: 8.3333%;
+  }
+  .col-xl-2 {
+    width: 16.6666%;
+  }
+  .col-xl-3 {
+    width: 25%;
+  }
+  .col-xl-4 {
+    width: 33.3333%;
+  }
+  .col-xl-5 {
+    width: 41.6666%;
+  }
+  .col-xl-6 {
+    width: 50%;
+  }
+  .col-xl-7 {
+    width: 58.3333%;
+  }
+  .col-xl-8 {
+    width: 66.6666%;
+  }
+  .col-xl-9 {
+    width: 75%;
+  }
+  .col-xl-10 {
+    width: 83.3333%;
+  }
+  .col-xl-11 {
+    width: 91.6666%;
+  }
+  .col-xl-12 {
+    width: 100%;
+  }
+}
+.card {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+.card-image {
+  background-image: url("../images/everest.jpg");
+  height: 250px;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.card-head {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+.card-content {
+  padding: 15px;
+  background-color: white;
+}
+.card-content-head {
+  color: grey;
+  margin-bottom: 15px;
+}
+.card-descr {
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+.button {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  text-transform: uppercase;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #53ab53;
+  padding: 0 5px;
+}
+.card-actions {
+  font-size: 0;
+}
+.card-button {
+  margin-right: 15px; 
+}
+.card-button:last-child {
+  margin-right: 0;
+}
