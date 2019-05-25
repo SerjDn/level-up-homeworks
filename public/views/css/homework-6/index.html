@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS HW 6</title>
     <style>a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}button,input,optgroup,select,textarea{background:0 0;border:0;padding:0;margin:0;font:inherit;color:inherit;box-shadow:none}button{height:auto;cursor:pointer}button:focus{outline:0}button::-moz-focus-inner{outline:0;border:0;padding:0}      
     </style>
@@ -10,18 +11,21 @@
   <body>
     <div class="wrapper">
       <div class="content">
-        <div class="container">
-          <div class="row">
-            <div class="column">
-              <div class="card">
-                <div class="card-icon"></div>
-                <div class="card-text">Smile</div>
-                <div class="card-button"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="circle">222</div>
+        <ul class="list">
+          <li class="line first-line">
+            <p class="descr first-descr">Smile</p>
+            <span class="status approved-status">Approved</span>
+          </li>
+          <li class="line second-line">
+            <p class="descr second-descr">Edit</p>
+            <span class="status pending-status">Pending</span>
+          </li>
+          <li class="line third-line">
+            <span class="status error-status">Error</span> 
+            <p class="descr third-descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut obcaecati blanditiis, asperiores vitae expedita dolorem aperiam totam ab labore deserunt unde quisquam facilis aliquid mollitia quasi recusandae, quos sed. Voluptatum.</p>
+          </li>
+        </ul>
+        <div class="circle"></div>
       </div>
     </div>
   </body>
