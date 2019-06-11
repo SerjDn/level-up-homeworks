@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #444;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.loader {
+  margin: 50px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(at center, #c5c5c5, black);
+  position: relative;
+}
+.loader-half {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+.loader-half-right {
+  right: 0;
+  left: auto;
+}
+.loader-indicator {
+  width: 200%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #7575de;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loader-indicator-left {
+  border-right-color: transparent;
+  transform: rotate(-225deg);
+  animation: rotate-left-side 5s 5s linear forwards;
+}
+.loader-indicator-right {
+  right: 0;
+  left: auto;
+  border-left-color: transparent;
+  transform: rotate(-135deg);
+  animation: rotate-right-side 5s linear forwards;
+}
+@keyframes rotate-right-side {
+  from {
+    transform: rotate(-135deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+@keyframes rotate-left-side {
+  from {
+    transform: rotate(-225deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+.timer-container {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 100px;
+}
+@keyframes load {
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+.timer {
+  animation: load 10s steps(10, end);
+}
