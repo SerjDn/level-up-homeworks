@@ -16,5 +16,5 @@ var userName = 'Петя';
 // Additional task 1
 var fps;
 var connectorBetweenWords;
-var documentView;
-var showLastPageNav;
+var documentViewMode;
+var showLastNavPage;
