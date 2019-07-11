@@ -1,59 +1,131 @@
 'use strict';
 
-// Unit link - https://learn.javascript.ru/task/if-zero-string
+// Unit link - https://learn.javascript.ru/ifelse
 // Task 1
-if ('0') {
-  console.log('Привет'); // '0' в данном случае - true, т.к. 0 в кавычках принимает тип string
+if (' ') {
+  console.log('Привет'); // Условие в скобках преобразовуется к логическому типу: true / false. К false можно отнести: 0, NaN, Undefined, null, пустая строка. Все остальное принимает значение true. Т.к. здесь не просто 0, а '0', т.е. строка и она не пустая, то эта строка также принимает значение true.
 }
 
-// Unit link - https://learn.javascript.ru/task/check-standard
 // Task 2
 var JSNname = prompt('Каково официальное название JavaScript?');
 
-if (JSNname === 'ECMAScript' || JSNname === 'EcmaScript' || JSNname === 'ecmascript') {
-  alert('Good!');
+if (JSNname === 'ECMAScript') {
+  console.log('Good!');
 } else {
-  alert('Не знаете? "ECMAScript"!');
+  console.log('Не знаете? "ECMAScript"!');
 }
-// тут вопрос - почему не срабатывает следующие формы записи в conditions?
-// 1) if (JSNname === 'ECMAScript' || 'EcmaScript' || 'ecmascript')
-// 2) if (JSNname === 'ECMAScript', 'EcmaScript', 'ecmascript')
 
-// Unit link - https://learn.javascript.ru/task/sign
 // Task 3
 var sign = prompt('Введите сюда что-то:');
 
 if (sign > 0) {
-  alert(1);
+  console.log(1);
 } else if (sign < 0) {
-  alert(-1);
-}
-else {
-  alert(0);
+  console.log(-1);
+} else {
+  console.log(0);
 }
 
-// Unit link - https://learn.javascript.ru/task/check-login
 // Task 4
-var user = 'admin';
-var password = 'Чёрный Властелин';
+var user = prompt('Ты кто?', '');
 
-if (user !== prompt('Ты кто?')) {
-  alert('Давай досвидания!');
-} else if (password === prompt('Введите Ваш пароль:')) {
-  alert('Добро пожаловать, Властелин!');
-}
-else {
-  alert('Ты не админ!');
+if (user === null) {
+  console.log('Давай досвидания!');
+} else if (user !== 'admin') {
+  console.log('Ты не админ!');
+} else {
+  var password = prompt('Введите Ваш пароль:', '');
+
+  if (password === null) {
+    console.log('Давай досвидания!');
+  } else if (password === 'Чёрный Властелин') {
+    console.log('Добро пожаловать, Властелин!');
+  } else {
+    console.log('Пароль неверен!');
+  }
 }
 
-// Unit link - https://learn.javascript.ru/task/rewrite-if-question
 // Task 5
 var a = 1;
 var b = 2;
 var result = (a + b < 4) ? 'Мало' : 'Много';
 console.log(result); // в консоль выводится "Мало", т.к. 2 +1 = 3 и это < 4
 
-// Unit link - https://learn.javascript.ru/task/rewrite-if-else-question
 // Task 6
-var login = prompt('Укажите Ваш логин')
-var message = (login === 'Вася') ? alert('Привет') : (login === 'Директор') ? alert('Здравствуйте') : (login === ' ') ? alert('Нет логина') : alert('');
+var login = prompt('Укажите Ваш логин', '');
+var message = (login === 'Вася') ? console.log('Привет') : (login === 'Директор') ? console.log('Здравствуйте') : (login === null) ? console.log('Нет логина') : console.log(' ');
+
+// Unit link - https://learn.javascript.ru/logical-ops
+// Task 1
+console.log(null || 2 || undefined); // Оператор "или" возвращает первое true, если хотябы один из аргументов - true. Начинаем проверять: null - false, 2 - true. Проверка закончилась, в консоле будет 2.
+
+// Task 2
+console.log(console.log(1) || 2 || console.log(3)); // console.log(1) выполняется и записывает в консоль 1, затем идет оператор "или" который находит первое true и выводит его в консоль, после чего проверка заканчивается. Первым true будет двойка. Т.е. в консоле будет 1 и 2.
+
+// Task 3
+console.log(1 && null && 2); // Оператор "и" возвращает первое false, если хотябы один из аргументов - false. Начинаем проверку: 1 - true, null - false. Проверка окончена, в консоль выведется null.
+
+// Task 4
+console.log(console.log(1) && console.log(2)); // Как и в task 2 сразу в консоль выведется результат console.log(1). Затем оператор "и" ищет первое false и сразу его находит: console.log(1) принимает логическое значение undefined. В результате в консоле будет 1 и undefined.
+
+// Task 5
+console.log(null || 2 && 3 || 4); // У оператора "и" больше приоритет, чем у оператора "или". Сразу срабатывает console.log(2 && 3), т.к. оба значания - true, то возвращается последнее true - 3. Остается console.log(null || 3 || 4). Как мы уже знаем - оператор "или" возвращает первое true, если хотябы один из аргументов - true. Первое true это 3, в результате в консоле будет 3.
+
+// Task 6
+var age = prompt('Укажите Ваш возраст:', '');
+
+if (age >= 14 && age <= 90) {
+  console.log('Вы нам подъодите!');
+} else {
+  console.log('Досвидания!');
+}
+
+// Task 7
+var age = prompt('Укажите Ваш возраст:', '');
+
+if (!(age >= 14 && age <= 90)) {
+  console.log('Вы нам подъодите!');
+} else {
+  console.log('Досвидания!');
+}
+
+//Или такой вариант:
+var age = prompt('Укажите Ваш возраст:', '');
+
+if (age < 14 || age > 90) {
+  console.log('Вы нам подъодите!');
+} else {
+  console.log('Досвидания!');
+}
+
+// Task 8
+if (-1 || 0) console.log('первое');
+if (-1 && 0) console.log('второе');
+if (null || -1 && 1) console.log('третье');
+// Чтобы понять что из этого выполнится нужно вычислить результат каждого из условий и перевести его в логическое значение true(результат выведется в консоль) или false. Вычисляем:
+// 1) (-1 || 0) - возвращается первое true -1, т.к. здесь true значит показываем сообщение в консоле
+// 2) (-1 && 0) - возвращается первое false 0, т.к. здесь false то ничего не показываем в консоле
+// 3) (null || -1 && 1) - мы уже знаем что у оператора "и" больше приоритет, значит сразу выполнится (-1 && 1). Т.к. все значения true то возвращается последнее - единица. И вот что у нас остается: (null || 1). Оператор "или" возвращает первое true, т.е. единицу и т.к. в результате у нас в этом условии true, то его также выводим в консоль.
+
+// Unit link - https://learn.javascript.ru/types-conversion
+// Task 1
+console.log("" + 1 + 0) // оператор "+" используется для преобразования в строку, если одиин из єлементов - строка. В итоге получаем "" + 1 + 0 = "10"
+console.log("" - 1 + 0) // оператор "-" преобразовует строку в число, т.е. "" преобразуется в 0. Итого получаем 0 - 1 + 0 = -1
+console.log(true + false) // здесь вновь наблюдает работу оператора "+", который преобразует true в 1, а false в 0, получаем 1 + 0 = 1
+console.log(6 / "3") // при делении строка "3" преобразуется в число и получаем 2
+console.log("2" * "3") // при умножении аналогично - строки преобразуются в числа и получаем 2 * 3 = 6
+console.log(4 + 5 + "px") // Выполняем операции слева направо. Сразу выполняем операцию 4 + 5 = 9, а затем 9 преобразуется в строку, т.к. один из элементов - строка("px") и получаем "9" + "px" = "9px"
+console.log("$" + 4 + 5) // Выполняем операции слева направо. Первый элемент - строка, "+" преобразует остальные элементы в строку и получаем "$" + "4" + "5" = "$45"
+console.log("4" - 2) // мы уже знаем что оператор "-" работает только с числами и строку "4" он преобразует в число и получаем 4 - 2 = 2
+console.log("4px" - 2) // оператор "-" преобразует "4px" в NaN и NaN - 2 = NaN
+console.log(7 / 0) // на 0 делить нельзя, получаем бесконечность
+console.log("  -9\n" + 5) // оператор "+" приводит 5 к строке "5". К строке "  -9\n" + "5" и получаем "  -9\n5"
+console.log("  -9\n" - 5) // оператор "-" приводит "  -9\n" к числу: пробелы обрезаются, из непустой строки считывается число, т.е. -9. В итоге -9 - 5 = -14
+console.log(5 && 2) // если все значения true то && возвращает последнее, т.е. число 2
+console.log(2 && 5) // аналогично, только теперь 5 - последнее значание
+console.log(5 || 0) // оператор || возвращает первое значение true - пятерку
+console.log(0 || 5) // здесь ничего не меняется в консоле, т.к. 0 - false, то опять возвращается 5
+console.log(null + 1)  // null преобразуется в 0, 0 + 1 = 1
+console.log(undefined + 1) // undefined преобразуется в NaN, NaN + 1 = NaN
+console.log(null == "\n0\n") // null преобразуется в 0, не пустая строка преобразуетяс в 1, выражение 0 == 1 - false
+console.log(+null == +"\n0\n") // +null преобразуется в 0, +"\n0\n" преобразуется в число: пробелы орезаются и считывается число 0. В итоге 0 == 0 это true
